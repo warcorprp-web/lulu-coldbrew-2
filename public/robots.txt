@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lulu.ziptoweb.ru/sitemap.xml

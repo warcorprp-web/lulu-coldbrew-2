@@ -1,0 +1,17 @@
+{
+  "name": "LULU Cold Brew",
+  "short_name": "LULU",
+  "description": "Натуральный cold brew для кафе, кофеен и HoReCa. Поставка, брендирование, доставка по всей России.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e4497",
+  "theme_color": "#1e4497",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "/img/logo-header.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
