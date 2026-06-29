@@ -31,10 +31,10 @@ export function Documents() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <div className="w-12 h-1 rounded-full bg-[#f07d47]" />
-          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-on-brand">
             Всё прозрачно
           </h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="mt-4 text-lg text-on-brand/70">
             Мы работаем по всем правилам. Здесь — все документы, которые нужны
             для продажи продукта в вашем заведении.
           </p>
@@ -46,7 +46,7 @@ export function Documents() {
               key={doc.title}
               href={`/docs/${doc.file}`}
               download
-              className="group relative bg-white rounded-2xl p-6 transition-all hover:shadow-lg flex flex-col before:absolute before:inset-0 before:rounded-2xl before:bg-[#f07d47]/5 before:pointer-events-none overflow-hidden"
+              className="group relative bg-surface rounded-2xl p-6 transition-all hover:shadow-lg flex flex-col before:absolute before:inset-0 before:rounded-2xl before:bg-[#f07d47]/5 before:pointer-events-none overflow-hidden"
             >
               <div className="relative mb-4 [&_svg]:stroke-[#f07d47]">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

@@ -58,10 +58,10 @@ export function Advantages() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <div className="w-12 h-1 rounded-full bg-[#f07d47]" />
-          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-on-brand">
             Почему нам доверяют
           </h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="mt-4 text-lg text-on-brand/70">
             Мы не просто поставляем кофе — мы строим партнёрство, в котором
             выгодно и комфортно обеим сторонам. Вот за что нас выбирают.
           </p>
@@ -72,14 +72,14 @@ export function Advantages() {
             return (
               <div
                 key={item.title}
-                className="group relative bg-white rounded-2xl p-7 transition-all hover:shadow-lg cursor-default before:absolute before:inset-0 before:rounded-2xl before:bg-[#f07d47]/5 before:pointer-events-none overflow-hidden"
+                className="group relative bg-surface rounded-2xl p-7 transition-all hover:shadow-lg cursor-default before:absolute before:inset-0 before:rounded-2xl before:bg-[#f07d47]/5 before:pointer-events-none overflow-hidden"
               >
                 <div className="relative">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="shrink-0 [&_svg]:stroke-[#f07d47] [&_svg]:w-6 [&_svg]:h-6">
                       <Icon />
                     </div>
-                    <h3 className="text-lg font-bold text-[#1a1a1a]">
+                    <h3 className="text-lg font-bold text-on-surface">
                       {item.title}
                     </h3>
                   </div>
@@ -93,7 +93,7 @@ export function Advantages() {
         </div>
 
           <div className="mt-16">
-          <h3 className="text-xl font-semibold text-white mb-8 text-center">
+          <h3 className="text-xl font-semibold text-on-brand mb-8 text-center">
             С нами работают
           </h3>
           <div className="relative overflow-hidden -mx-4 sm:-mx-6 lg:mx-0">
@@ -105,7 +105,7 @@ export function Advantages() {
                   alt={partner.alt}
                   width={200}
                   height={66}
-                  className="object-contain h-15 w-auto brightness-0 invert hover:brightness-0 hover:invert transition-all"
+                  className="object-contain h-15 w-auto partner-logo transition-all"
                 />
               ))}
             </div>

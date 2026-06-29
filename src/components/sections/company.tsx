@@ -10,13 +10,13 @@ export function Company() {
               className="h-20"
             />
           </div>
-          <p className="text-white/70 leading-relaxed text-lg">
+          <p className="text-on-brand/70 leading-relaxed text-lg">
             Мы — сеть премиальных кофеен, для которых кофе — это искусство.
             И точно знаем, чего хотят даже самые взыскательные ценители:
             никаких компромиссов. Только насыщенный вкус, только натуральный
             состав, только безупречное качество.
           </p>
-          <p className="text-white/70 leading-relaxed text-lg">
+          <p className="text-on-brand/70 leading-relaxed text-lg">
             Именно поэтому наш КОЛД БРЮ — это не просто напиток, а выверенный
             до мелочей продукт, который мы создали для себя и для тех, кто
             чувствует кофе так же глубоко, как мы.

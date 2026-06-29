@@ -7,6 +7,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-on-brand: var(--on-brand);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-muted-text: var(--muted-text);
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-montserrat);
   --font-logo: var(--font-pacifico);
@@ -49,6 +54,12 @@
 }
 
 :root {
+  --brand: #1e4497;
+  --partner-filter: brightness(0) invert(1);
+  --on-brand: #ffffff;
+  --surface: #ffffff;
+  --on-surface: #1a1a1a;
+  --muted-text: #6b7280;
   --background: #1e4497;
   --foreground: #ffffff;
   --card: #ffffff;
@@ -83,6 +94,33 @@
   --sidebar-ring: #f07d47;
 }
 
+[data-theme="light"] {
+  --brand: #ffffff;
+  --partner-filter: none;
+  --on-brand: #1e4497;
+  --surface: #1e4497;
+  --on-surface: #ffffff;
+  --muted-text: #6b7280;
+  --background: #ffffff;
+  --foreground: #1e4497;
+  --card: #1e4497;
+  --card-foreground: #ffffff;
+  --popover: #1e4497;
+  --popover-foreground: #ffffff;
+  --secondary: #1e4497;
+  --secondary-foreground: #ffffff;
+  --muted: rgba(30, 68, 151, 0.1);
+  --muted-foreground: rgba(30, 68, 151, 0.7);
+  --border: rgba(30, 68, 151, 0.15);
+  --input: rgba(30, 68, 151, 0.2);
+  --chart-2: #1e4497;
+  --chart-3: rgba(30, 68, 151, 0.5);
+  --chart-4: rgba(30, 68, 151, 0.3);
+  --chart-5: rgba(30, 68, 151, 0.1);
+  --sidebar: #1e4497;
+  --sidebar-foreground: #ffffff;
+}
+
 @keyframes slide-up {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
@@ -99,6 +137,10 @@
 
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+.partner-logo {
+  filter: var(--partner-filter);
 }
 
 .animate-slide-up {

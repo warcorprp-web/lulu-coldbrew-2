@@ -43,10 +43,10 @@ export function ScrollVideo() {
       ref={containerRef}
       className="relative h-[300vh]"
     >
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden bg-[#1e4497]">
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden bg-brand">
         <div className="relative w-full max-w-sm mx-auto aspect-[9/16]">
           {!ready && (
-            <div className="absolute inset-0 flex items-center justify-center text-white/40 text-sm rounded-2xl bg-[#1e4497]">
+            <div className="absolute inset-0 flex items-center justify-center text-on-brand/40 text-sm rounded-2xl bg-brand">
               Загружается...
             </div>
           )}

@@ -6,11 +6,10 @@ import { ExternalLink } from "lucide-react"
 import { FlavorModal } from "@/components/flavor-modal"
 
 const flavors = [
-  { name: "Вишня", tag: "Хит продаж", img: "bottle_3.png", full: "LULU КОЛД БРЮ Cherry", desc: "Насыщенный вкус спелой вишни с яркой кофейной основой. Натуральный состав без сахара" },
-  { name: "Малина", tag: "Рекомендуем", img: "bottle_2.png", full: "LULU КОЛД БРЮ Raspberry", desc: "Яркий малиновый вкус с приятной кислинкой. Отличный выбор для летних месяцев" },
-  { name: "Смородина", tag: "Новинка", img: "bottle_1.png", full: "LULU КОЛД БРЮ Currant", desc: "Созревшая смородина в идеальной паре с холодным кофе. Богатый вкус и аромат" },
-  { name: "Гранат", tag: "Премиум", img: "bottle_5.png", full: "LULU КОЛД БРЮ Pomegranate", desc: "Экзотическая гранатовая нотка. Глубокий вкус с кофейными оттенками" },
-  { name: "Айва", tag: "Эксклюзив", img: "bottle_4.png", full: "LULU КОЛД БРЮ Quince", desc: "Свежая айва с мягким кофейным послевкусием. Редкий вкус для ценителей" },
+  { name: "Гранат", tag: "Хит", img: "bottle_5.png", full: "LULU КОЛД БРЮ Pomegranate", desc: "Экзотическая гранатовая нотка. Глубокий вкус с кофейными оттенками" },
+  { name: "Смородина", tag: "Классика", img: "bottle_1.png", full: "LULU КОЛД БРЮ Currant", desc: "Созревшая смородина в идеальной паре с холодным кофе. Богатый вкус и аромат" },
+  { name: "Ежевика малина", tag: "Рекомендуем", img: "ezevika.jpg", full: "LULU КОЛД БРЮ Blackberry & Raspberry", desc: "Яркий ягодный микс с приятной кислинкой. Отличный выбор для любого сезона" },
+  { name: "Кизил", tag: "Премиум", img: "kizil.jpg", full: "LULU КОЛД БРЮ Dogwood", desc: "Терпкий кизил с мягким кофейным послевкусием. Редкий вкус для ценителей" },
 ]
 
 const loop = [...flavors, ...flavors, ...flavors]
@@ -94,11 +93,11 @@ export function Flavors() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <div className="w-12 h-1 rounded-full bg-[#f07d47]" />
-          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-white">
-            Пять вкусов — пять характеров
+          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-on-brand">
+            Четыре вкуса — четыре характера
           </h2>
-          <p className="mt-4 text-lg text-white/70">
-            Пять вкусов — от классической вишни до эксклюзивной айвы. Каждый
+          <p className="mt-4 text-lg text-on-brand/70">
+            От терпкого кизила до сладкой смородины. Каждый
             настаивается 20 часов, чтобы сохранить натуральный вкус ягод без
             сахара и ароматизаторов.
           </p>
@@ -120,7 +119,7 @@ export function Flavors() {
             }}
             onClick={() => setSelectedFlavor(flavor)}
           >
-            <div className="group relative rounded-2xl overflow-hidden bg-white border-[5px] border-white flex flex-col h-full">
+            <div className="group relative rounded-2xl overflow-hidden bg-surface border-[5px] border-white flex flex-col h-full">
               <div className="relative flex-1 min-h-0 overflow-hidden rounded-xl">
                 <Image
                   src={`/img/${flavor.img}`}
@@ -130,9 +129,9 @@ export function Flavors() {
                   sizes="(max-width: 640px) 70vw, 340px"
                 />
               </div>
-              <div className="bg-white px-5 pt-3 pb-4 shrink-0 relative">
+              <div className="bg-surface px-5 pt-3 pb-4 shrink-0 relative">
                 <div className="flex items-center gap-2 min-w-0">
-                  <h3 className="text-xl font-bold text-[#1a1a1a] truncate">{flavor.name}</h3>
+                  <h3 className="text-xl font-bold text-on-surface truncate">{flavor.name}</h3>
                   <span className="text-[10px] font-medium text-[#f07d47] border border-[#f07d47] px-2 py-0.5 rounded-full shrink-0">
                     {flavor.tag}
                   </span>

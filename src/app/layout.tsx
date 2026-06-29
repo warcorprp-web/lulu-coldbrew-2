@@ -3,6 +3,7 @@ import { Montserrat, Pacifico } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -77,8 +78,8 @@ export const metadata: Metadata = {
     images: ["/img/logo_3.jpeg"],
   },
   icons: {
-    icon: "/img/logo-header.png",
-    apple: "/img/logo-header.png",
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
   manifest: "/manifest.json",
   category: "food & beverage",
@@ -95,11 +96,13 @@ export default function RootLayout({
       className={`${montserrat.variable} ${pacifico.variable} font-sans antialiased`}
     >
       <body className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <div>
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <div>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

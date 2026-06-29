@@ -135,21 +135,21 @@ export function Geography() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <div className="w-12 h-1 rounded-full bg-[#f07d47]" />
-          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-on-brand">
             Доставляем по всей России<sup className="text-[#f07d47] text-lg">*</sup>
           </h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="mt-4 text-lg text-on-brand/70">
             От Калининграда до Владивостока. Подстраиваемся под ваш объём и логистику.
           </p>
         </div>
 
         <div
           ref={containerRef}
-          className="relative w-full aspect-[1650/1000] max-w-4xl mx-auto rounded-2xl overflow-hidden bg-[#1e4497] mb-16 [&_svg]:w-full [&_svg]:h-full"
+          className="relative w-full aspect-[1650/1000] max-w-4xl mx-auto rounded-2xl overflow-hidden bg-brand mb-16 [&_svg]:w-full [&_svg]:h-full"
           dangerouslySetInnerHTML={{ __html: svgContent }}
         />
 
-        <p className="text-sm text-white/40 mt-4 mb-10 max-w-4xl mx-auto">
+        <p className="text-sm text-on-brand/40 mt-4 mb-10 max-w-4xl mx-auto">
           <span className="text-[#f07d47]">*</span> доставляем транспортными компаниями, подробности и расценки уточним в начале сотрудничества
         </p>
 
@@ -157,13 +157,13 @@ export function Geography() {
           {info.map((item) => {
             const Icon = item.icon
             return (
-            <div key={item.title} className="relative bg-white rounded-2xl p-6 before:absolute before:inset-0 before:rounded-2xl before:bg-[#f07d47]/5 before:pointer-events-none overflow-hidden h-full">
+            <div key={item.title} className="relative bg-surface rounded-2xl p-6 before:absolute before:inset-0 before:rounded-2xl before:bg-[#f07d47]/5 before:pointer-events-none overflow-hidden h-full">
               <div className="relative">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="shrink-0 [&_svg]:stroke-[#f07d47]">
                     <Icon />
                   </span>
-                  <h3 className="text-base font-bold text-[#1a1a1a]">{item.title}</h3>
+                  <h3 className="text-base font-bold text-on-surface">{item.title}</h3>
                 </div>
                 <p className="text-[#4b5563] leading-relaxed text-sm">
                   {item.text}

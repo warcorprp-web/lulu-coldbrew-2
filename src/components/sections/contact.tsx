@@ -27,10 +27,10 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-10">
           <div className="w-12 h-1 rounded-full bg-[#f07d47]" />
-          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-on-brand">
             Давайте начнём
           </h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="mt-4 text-lg text-on-brand/70">
             Оставьте заявку — перезвоним в течение дня, рассчитаем цену под ваш
             объём и отправим бесплатные образцы. Без обязательств.
           </p>
@@ -46,8 +46,8 @@ export function Contact() {
                       <div
                         className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
                           i <= step
-                            ? "bg-[#f07d47] text-white"
-                            : "bg-white/20 text-white/50"
+                            ? "bg-[#f07d47] text-on-brand"
+                            : "bg-white/20 text-on-brand/50"
                         }`}
                       >
                         {i + 1}
@@ -72,7 +72,7 @@ export function Contact() {
                     }`}
                   >
                     <div className="space-y-2">
-                      <Label htmlFor="name" className="text-white">Как вас зовут?</Label>
+                      <Label htmlFor="name" className="text-on-brand">Как вас зовут?</Label>
                       <Input
                         id="name"
                         placeholder="Имя"
@@ -81,7 +81,7 @@ export function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone" className="text-white">Телефон</Label>
+                      <Label htmlFor="phone" className="text-on-brand">Телефон</Label>
                       <Input
                         id="phone"
                         type="tel"
@@ -100,7 +100,7 @@ export function Contact() {
                     }`}
                   >
                     <div className="space-y-2">
-                      <Label htmlFor="company" className="text-white">Заведение или компания</Label>
+                      <Label htmlFor="company" className="text-on-brand">Заведение или компания</Label>
                       <Input
                         id="company"
                         placeholder="Название"
@@ -108,7 +108,7 @@ export function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="comment" className="text-white">Пара слов о вас</Label>
+                      <Label htmlFor="comment" className="text-on-brand">Пара слов о вас</Label>
                       <Textarea
                         id="comment"
                         placeholder="Тип бизнеса, примерный объём, пожелания"
@@ -124,14 +124,14 @@ export function Contact() {
                         <Button
                           type="button"
                           onClick={() => setStep(step - 1)}
-                          className="rounded-full bg-transparent border border-white/20 text-white h-12 px-6 hover:bg-white/10"
+                          className="rounded-full bg-transparent border border-white/20 text-on-brand h-12 px-6 hover:bg-on-brand/10"
                         >
                           Назад
                         </Button>
                       )}
                       <Button
                         type="submit"
-                        className="flex-1 rounded-full bg-[#f07d47] hover:bg-[#d86a39] text-white h-12 text-base"
+                        className="flex-1 rounded-full bg-[#f07d47] hover:bg-[#d86a39] text-on-brand h-12 text-base"
                       >
                         {step === 0 ? "Далее" : "Отправить заявку"}
                       </Button>
@@ -148,8 +148,8 @@ export function Contact() {
                     <path d="M20 6L9 17l-5-5" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Заявка отправлена!</h3>
-                <p className="text-white/70">
+                <h3 className="text-2xl font-bold text-on-brand mb-2">Заявка отправлена!</h3>
+                <p className="text-on-brand/70">
                   Свяжемся с вами в течение рабочего дня. Спасибо за доверие!
                 </p>
               </div>
@@ -158,7 +158,7 @@ export function Contact() {
 
           <div className="flex flex-col justify-between">
             <div>
-              <p className="text-white/70 text-sm mb-4">
+              <p className="text-on-brand/70 text-sm mb-4">
                 Или свяжитесь с нами напрямую:
               </p>
               <div className="flex flex-wrap gap-3">

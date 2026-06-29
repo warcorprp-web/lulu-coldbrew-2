@@ -51,10 +51,10 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="w-12 h-1 rounded-full bg-[#f07d47]" />
-          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          <h2 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-on-brand">
             Коротко о важном
           </h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="mt-4 text-lg text-on-brand/70">
             Собрали ответы на вопросы, которые нам задают чаще всего.
             Не нашли свой? Напишите нам — ответим лично.
           </p>
@@ -66,9 +66,9 @@ export function FAQ() {
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="relative bg-white rounded-2xl px-6 border-none [&_[data-slot=accordion-trigger-icon]]:text-[#f07d47] before:absolute before:inset-0 before:rounded-2xl before:bg-[#f07d47]/5 before:pointer-events-none overflow-hidden"
+              className="relative bg-surface rounded-2xl px-6 border-none [&_[data-slot=accordion-trigger-icon]]:text-[#f07d47] before:absolute before:inset-0 before:rounded-2xl before:bg-[#f07d47]/5 before:pointer-events-none overflow-hidden"
             >
-              <AccordionTrigger className="relative text-left text-[#1a1a1a] hover:no-underline">
+              <AccordionTrigger className="relative text-left text-on-surface hover:no-underline">
                 <span className="flex items-center gap-3">
                   <span className="shrink-0 [&_svg]:stroke-[#f07d47]">
                     <Icon />

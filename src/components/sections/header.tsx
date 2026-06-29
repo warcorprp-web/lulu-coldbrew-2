@@ -63,7 +63,7 @@ export function Header() {
         <div
           className={`transition-all duration-300 ${
             scrolled
-              ? "bg-white rounded-2xl shadow-lg mx-auto max-w-7xl px-6"
+              ? "bg-surface rounded-2xl shadow-lg mx-auto max-w-7xl px-6"
               : "bg-transparent max-w-none px-4 sm:px-6 lg:px-8"
           }`}
         >
@@ -93,7 +93,7 @@ export function Header() {
               </a>
               <button
                 className={`p-2 transition-colors ${
-                  scrolled ? "text-[#f07d47]" : "text-white"
+                  scrolled ? "text-[#f07d47]" : "text-on-brand"
                 }`}
                 onClick={() => setOpen(!open)}
                 aria-label="Меню"
@@ -117,8 +117,8 @@ export function Header() {
                     href={link.href}
                     className={`flex items-center gap-3 text-base font-medium transition-colors ${
                       scrolled
-                        ? "text-[#6b7280] hover:text-[#1a1a1a]"
-                        : "text-white/70 hover:text-white"
+                        ? "text-[#6b7280] hover:text-on-surface"
+                        : "text-on-brand/70 hover:text-on-brand"
                     }`}
                     onClick={() => handleNavClick(link.href)}
                   >

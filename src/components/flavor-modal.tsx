@@ -5,11 +5,10 @@ import Image from "next/image"
 import { useEffect, useCallback } from "react"
 
 const details = {
-  "Вишня": { juice: "вишнёвый сок" },
-  "Малина": { juice: "малиновый сок" },
-  "Смородина": { juice: "сок чёрной смородины" },
   "Гранат": { juice: "гранатовый сок" },
-  "Айва": { juice: "сок айвы" },
+  "Смородина": { juice: "сок чёрной смородины" },
+  "Ежевика малина": { juice: "сок ежевики и малины" },
+  "Кизил": { juice: "сок кизила" },
 }
 
 interface FlavorModalProps {
@@ -56,10 +55,10 @@ export function FlavorModal({ flavor, onClose }: FlavorModalProps) {
 
       {/* Desktop modal */}
       <div className="fixed inset-0 z-[101] hidden lg:flex items-center justify-center p-8">
-        <div className="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="relative bg-surface rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors"
+            className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-surface/90 flex items-center justify-center hover:bg-surface transition-colors"
           >
             <X size={18} className="text-[#6b7280]" />
           </button>
@@ -78,7 +77,7 @@ export function FlavorModal({ flavor, onClose }: FlavorModalProps) {
               <p className="text-xs font-semibold text-[#f07d47] tracking-wider uppercase mb-1">
                 КОЛД БРЮ
               </p>
-              <h3 className="text-2xl font-bold text-[#1a1a1a]">
+              <h3 className="text-2xl font-bold text-on-surface">
                 {flavor.name}
               </h3>
               <p className="mt-1 text-sm text-[#4b5563] leading-relaxed">
@@ -91,10 +90,10 @@ export function FlavorModal({ flavor, onClose }: FlavorModalProps) {
               </div>
               <div className="space-y-3 text-sm text-[#4b5563]">
                 <p>
-                  <span className="font-semibold text-[#1a1a1a]">Состав:</span> подготовленная вода, экстракт кофе, {juice}, консерванты (сорбат калия, бензоат натрия). Кофеин: не более 0,4 мг/см³
+                  <span className="font-semibold text-on-surface">Состав:</span> подготовленная вода, экстракт кофе, {juice}, консерванты (сорбат калия, бензоат натрия). Кофеин: не более 0,4 мг/см³
                 </p>
                 <div>
-                  <p className="font-semibold text-[#1a1a1a]">КБЖУ на 100 г продукта:</p>
+                  <p className="font-semibold text-on-surface">КБЖУ на 100 г продукта:</p>
                   <p>белки – 0 &nbsp; жиры – 0 &nbsp; углеводы – 11</p>
                   <p>Энергетическая ценность: 45 ккал / 180 кДж</p>
                 </div>
@@ -105,13 +104,13 @@ export function FlavorModal({ flavor, onClose }: FlavorModalProps) {
       </div>
 
       {/* Mobile bottom sheet */}
-      <div className="fixed inset-x-0 bottom-0 z-[101] lg:hidden flex flex-col max-h-[85vh] rounded-t-2xl bg-white animate-slide-up">
+      <div className="fixed inset-x-0 bottom-0 z-[101] lg:hidden flex flex-col max-h-[85vh] rounded-t-2xl bg-surface animate-slide-up">
         <div className="flex items-center justify-center pt-2 pb-1 shrink-0">
           <div className="w-8 h-1 rounded-full bg-[#d1d5db]" />
         </div>
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-sm"
+          className="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-surface/90 flex items-center justify-center hover:bg-surface transition-colors shadow-sm"
         >
           <X size={16} className="text-[#6b7280]" />
         </button>
@@ -129,7 +128,7 @@ export function FlavorModal({ flavor, onClose }: FlavorModalProps) {
               <p className="text-xs font-semibold text-[#f07d47] tracking-wider uppercase mb-0.5">
                 КОЛД БРЮ
               </p>
-              <h3 className="text-xl font-bold text-[#1a1a1a]">
+              <h3 className="text-xl font-bold text-on-surface">
                 {flavor.name}
               </h3>
               <p className="mt-1 text-sm text-[#4b5563] leading-relaxed">
@@ -144,10 +143,10 @@ export function FlavorModal({ flavor, onClose }: FlavorModalProps) {
           </div>
           <div className="space-y-3 text-sm text-[#4b5563]">
             <p>
-              <span className="font-semibold text-[#1a1a1a]">Состав:</span> подготовленная вода, экстракт кофе, {juice}, консерванты (сорбат калия, бензоат натрия). Кофеин: не более 0,4 мг/см³
+              <span className="font-semibold text-on-surface">Состав:</span> подготовленная вода, экстракт кофе, {juice}, консерванты (сорбат калия, бензоат натрия). Кофеин: не более 0,4 мг/см³
             </p>
             <div>
-              <p className="font-semibold text-[#1a1a1a]">КБЖУ на 100 г продукта:</p>
+              <p className="font-semibold text-on-surface">КБЖУ на 100 г продукта:</p>
               <p>белки – 0 &nbsp; жиры – 0 &nbsp; углеводы – 11</p>
               <p>Энергетическая ценность: 45 ккал / 180 кДж</p>
             </div>
