@@ -197,10 +197,6 @@ export function Contact() {
                   MAX
                 </a>
               </div>
-              <div className="mt-6 space-y-1 text-sm text-on-brand/60">
-                <p>Тел/WhatsApp/MAX: +7 (927) 074-04-31</p>
-                <p>Telegram: @LULU_ColdBrew_B2B</p>
-              </div>
             </div>
           </div>
         </div>
