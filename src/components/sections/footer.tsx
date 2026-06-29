@@ -1,11 +1,4 @@
-"use client"
-
-import { useTheme } from "@/components/theme-provider"
-import { Moon, Sun } from "lucide-react"
-
 export function Footer() {
-  const { theme, toggle } = useTheme()
-
   return (
     <footer className="py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -29,14 +22,7 @@ export function Footer() {
           <a href="/data-consent" className="hover:text-on-brand/60 transition-colors">Согласие на обработку данных</a>
           <a href="/privacy" className="hover:text-on-brand/60 transition-colors">Политика конфиденциальности</a>
           <a href="/offer" className="hover:text-on-brand/60 transition-colors">Публичная оферта</a>
-          <button
-            onClick={toggle}
-            className="inline-flex items-center gap-1.5 text-on-brand/40 hover:text-on-brand/60 transition-colors"
-            aria-label="Переключить тему"
-          >
-            {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
-            {theme === "dark" ? "Светлая" : "Тёмная"}
-          </button>
+
         </div>
       </div>
     </footer>

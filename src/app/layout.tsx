@@ -3,7 +3,6 @@ import { Montserrat, Pacifico } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -96,13 +95,11 @@ export default function RootLayout({
       className={`${montserrat.variable} ${pacifico.variable} font-sans antialiased`}
     >
       <body className="min-h-screen flex flex-col">
-        <ThemeProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <div>
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
