@@ -163,7 +163,7 @@ export function Contact() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://wa.me/79275814028"
+                  href="https://wa.me/79270740431"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-5 h-11 text-sm font-medium text-[#1a1a1a] hover:bg-white/90 transition-all"
@@ -172,13 +172,20 @@ export function Contact() {
                   WhatsApp
                 </a>
                 <a
-                  href="https://t.me/lulu.astr"
+                  href="https://t.me/LULU_ColdBrew_B2B"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-5 h-11 text-sm font-medium text-[#1a1a1a] hover:bg-white/90 transition-all"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="#0088cc"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/></svg>
                   Telegram
+                </a>
+                <a
+                  href="tel:+79270740431"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-5 h-11 text-sm font-medium text-[#1a1a1a] hover:bg-white/90 transition-all"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1a1a1a]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Позвонить
                 </a>
                 <a
                   href="#"
@@ -189,6 +196,10 @@ export function Contact() {
                   <img src="/img/max-logo.png" alt="MAX" className="h-5 w-5" />
                   MAX
                 </a>
+              </div>
+              <div className="mt-6 space-y-1 text-sm text-on-brand/60">
+                <p>Тел/WhatsApp/MAX: +7 (927) 074-04-31</p>
+                <p>Telegram: @LULU_ColdBrew_B2B</p>
               </div>
             </div>
           </div>
