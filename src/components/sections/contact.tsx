@@ -246,7 +246,7 @@ export function Contact() {
                   Позвонить
                 </a>
                 <a
-                  href="#"
+                  href="https://max.ru/u/f9LHodD0cOLo46ap3wliB-YgdIvLdNjqiWiNjZHoheSCDfskQlezaCT_IiA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-5 h-11 text-sm font-medium text-[#1a1a1a] hover:bg-white/90 transition-all"
