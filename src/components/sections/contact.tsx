@@ -1,10 +1,37 @@
 "use client"
 
+import { type ChangeEvent } from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
+
+function formatPhone(value: string): string {
+  let digits = value.replace(/\D/g, "")
+  if (digits.startsWith("8")) digits = "7" + digits.slice(1)
+  else if (digits.startsWith("9")) digits = "7" + digits
+
+  if (!digits.startsWith("7")) digits = "7" + digits
+  digits = digits.slice(0, 11)
+
+  let formatted = "+7"
+  if (digits.length > 1) formatted += " (" + digits.slice(1, 4)
+  if (digits.length >= 5) formatted += ") " + digits.slice(4, 7)
+  if (digits.length >= 8) formatted += "-" + digits.slice(7, 9)
+  if (digits.length >= 10) formatted += "-" + digits.slice(9, 11)
+  return formatted
+}
+
+function handlePhoneChange(e: ChangeEvent<HTMLInputElement>, setter: (v: string) => void) {
+  const raw = e.target.value
+  const digits = raw.replace(/\D/g, "")
+  if (!digits) {
+    setter("")
+    return
+  }
+  setter(formatPhone(raw))
+}
 
 export function Contact() {
   const [step, setStep] = useState(0)
@@ -112,7 +139,7 @@ export function Contact() {
                         placeholder="+7 (___) ___-__-__"
                         required
                         value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
+                        onChange={(e) => handlePhoneChange(e, setPhone)}
                         className="rounded-xl bg-white border-none h-12 text-[#1a1a1a] placeholder:text-[#9ca3af]"
                       />
                     </div>
