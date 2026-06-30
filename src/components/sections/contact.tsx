@@ -9,16 +9,38 @@ import { Label } from "@/components/ui/label"
 export function Contact() {
   const [step, setStep] = useState(0)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState("")
+  const [sending, setSending] = useState(false)
+
+  const [name, setName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [company, setCompany] = useState("")
+  const [comment, setComment] = useState("")
 
   const steps = ["Контакты", "О вас", "Готово"]
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError("")
     if (step < 1) {
       setStep(step + 1)
-    } else {
+      return
+    }
+    setSending(true)
+    try {
+      const res = await fetch("/api/order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, company, comment }),
+      })
+      const data = await res.json()
+      if (!data.ok) throw new Error(data.error || "Ошибка отправки")
       setSubmitted(true)
       setStep(2)
+    } catch (e: any) {
+      setError(e.message || "Что-то пошло не так. Попробуйте позже.")
+    } finally {
+      setSending(false)
     }
   }
 
@@ -77,6 +99,8 @@ export function Contact() {
                         id="name"
                         placeholder="Имя"
                         required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="rounded-xl bg-white border-none h-12 text-[#1a1a1a] placeholder:text-[#9ca3af]"
                       />
                     </div>
@@ -87,6 +111,8 @@ export function Contact() {
                         type="tel"
                         placeholder="+7 (___) ___-__-__"
                         required
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
                         className="rounded-xl bg-white border-none h-12 text-[#1a1a1a] placeholder:text-[#9ca3af]"
                       />
                     </div>
@@ -104,6 +130,8 @@ export function Contact() {
                       <Input
                         id="company"
                         placeholder="Название"
+                        value={company}
+                        onChange={(e) => setCompany(e.target.value)}
                         className="rounded-xl bg-white border-none h-12 text-[#1a1a1a] placeholder:text-[#9ca3af]"
                       />
                     </div>
@@ -113,13 +141,17 @@ export function Contact() {
                         id="comment"
                         placeholder="Тип бизнеса, примерный объём, пожелания"
                         rows={4}
+                        value={comment}
+                        onChange={(e) => setComment(e.target.value)}
                         className="rounded-xl bg-white border-none text-[#1a1a1a] placeholder:text-[#9ca3af]"
                       />
                     </div>
                   </div>
 
-                  {!submitted && (
-                    <div className="flex gap-3">
+                  {error && (
+                    <p className="text-red-400 text-sm">{error}</p>
+                  )}
+                  <div className="flex gap-3">
                       {step > 0 && (
                         <Button
                           type="button"
@@ -133,10 +165,9 @@ export function Contact() {
                         type="submit"
                         className="flex-1 rounded-full bg-[#f07d47] hover:bg-[#d86a39] text-on-brand h-12 text-base"
                       >
-                        {step === 0 ? "Далее" : "Отправить заявку"}
+                        {step === 0 ? "Далее" : sending ? "Отправка..." : "Отправить заявку"}
                       </Button>
                     </div>
-                  )}
                 </form>
               </>
             )}
