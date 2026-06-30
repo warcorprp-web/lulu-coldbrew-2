@@ -6,8 +6,8 @@ import { ExternalLink } from "lucide-react"
 import { FlavorModal } from "@/components/flavor-modal"
 
 const flavors = [
-  { name: "Гранат", tag: "Хит", img: "bottle_5.png", full: "LULU КОЛД БРЮ Pomegranate", desc: "Экзотическая гранатовая нотка. Глубокий вкус с кофейными оттенками" },
-  { name: "Смородина", tag: "Классика", img: "bottle_1.png", full: "LULU КОЛД БРЮ Currant", desc: "Созревшая смородина в идеальной паре с холодным кофе. Богатый вкус и аромат" },
+  { name: "Гранат", tag: "Хит", img: "granat.jpg", full: "LULU КОЛД БРЮ Pomegranate", desc: "Экзотическая гранатовая нотка. Глубокий вкус с кофейными оттенками" },
+  { name: "Смородина", tag: "Классика", img: "smorodina.jpg", full: "LULU КОЛД БРЮ Currant", desc: "Созревшая смородина в идеальной паре с холодным кофе. Богатый вкус и аромат" },
   { name: "Ежевика малина", tag: "Рекомендуем", img: "ezevika.jpg", full: "LULU КОЛД БРЮ Blackberry & Raspberry", desc: "Яркий ягодный микс с приятной кислинкой. Отличный выбор для любого сезона" },
   { name: "Кизил", tag: "Премиум", img: "kizil.jpg", full: "LULU КОЛД БРЮ Dogwood", desc: "Терпкий кизил с мягким кофейным послевкусием. Редкий вкус для ценителей" },
 ]
